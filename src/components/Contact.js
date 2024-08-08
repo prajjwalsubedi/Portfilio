@@ -12,7 +12,7 @@ function Contact() {
                                 <p class="mb-3">Looking for a skilled QA professional to ensure the quality of your software? Let's collaborate to deliver exceptional results and elevate your project to the next level.</p>
                                 </div>
                                 <div class="col-sm-3 text-center text-sm-right">
-                                    <button class="btn btn-light rounded" href="mailto:email@email.de">Hire Me!</button>
+                                    <a href="mailto:prajjwalsubedi95@gmail.com"><button class="btn btn-light rounded">Hire Me!</button></a>
                                 </div>
                             </div>
                         </div>

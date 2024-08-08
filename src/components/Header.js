@@ -62,7 +62,7 @@ function Header() {
                   </div>
               </div>
               <div class="img-holder">
-                  <img src="assets/imgs/man.svg" alt=""/>
+                  <img src="assets/imgs/Prajjwal_Subedi.png" alt="Prajjwal Subedi"/>
               </div>
           </div>
   

@@ -5,7 +5,6 @@ import Header from './components/Header';
 import About from './components/About';
 import Service from './components/Service';
 import Skills from './components/Skills';
-import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -13,6 +12,7 @@ import Experience from './components/Experience';
 import reportWebVitals from './reportWebVitals';
 import { sendToVercelAnalytics } from './vitals';
 import Testmonial from './components/Testmonial';
+import Blog from './components/BLOG';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -22,10 +22,11 @@ ReactDOM.render(
     <Skills />
     <Experience />
     <Testmonial />
-    <Blog />
+    <Blogg />
     <Contact />
     <Footer />
   </React.StrictMode>,
+
   document.getElementById('root')
 );
 

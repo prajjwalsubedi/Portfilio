@@ -51,12 +51,12 @@ function Header() {
                   <p>Software Development Engineer in Test</p>
   
                   <div class="buttons pt-3">
-                      <button class="btn btn-primary rounded">HIRE ME</button>
-                      <button class="btn btn-dark rounded">DOWNLOAD CV</button>
+                        <a href="mailto:prajjwalsubedi95@gmail.com"><button class="btn btn-light rounded">Hire Me!</button></a>
+                        <a href="assets/resume/PRAJJWAL_SUBEDI_Resume.pdf"><button class="btn btn-dark rounded">DOWNLOAD CV</button></a>
                   </div>
   
                   <div class="socials mt-4">
-                      <a class="social-item" href="https://www.linkedin.com/in/prajjwalsubedi/"><i class="ti-linkedin"></i></a>
+                      <a class="social-item" href="https://www.linkedin.com/in/prajjwalsubedi"><i class="ti-linkedin"></i></a>
                       <a class="social-item" href="https://github.com/prajjwalsubedi"><i class="ti-github"></i></a>
                       <a class="social-item" href="https://twitter.com/prazwolsubedi"><i class="ti-twitter"></i></a>
                   </div>

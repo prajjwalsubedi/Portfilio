@@ -15,9 +15,7 @@ function Blog() {
                                 <div class="card-body">
                                     <h5 class="card-title">The Evolution of QA: From Manual Testing to Automation</h5>
                                     <div class="post-details">
-                                        <a href="javascript:void(0)">Posted By: Prajjwal</a>
-                                        {/* <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                        <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a> */}
+                                        <a href="https://www.linkedin.com/in/prajjwalsubedi">Posted By: Prajjwal Subedi</a>
                                     </div>
                                     <p>
                                     QA has transformed from manual testing to advanced automation, improving speed, scalability, and accuracy. With AI and continuous integration, QA now plays a crucial role in delivering high-quality software rapidly and efficiently.</p>

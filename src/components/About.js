@@ -18,7 +18,7 @@ function About() {
                                 in ensuring the quality and reliability of software products. My experience spans both manual
                                 and automated testing, API testing, and working in Agile environments. I’m passionate about
                                 delivering high-quality software and continuously improving testing processes.</p>
-                            <button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button>
+                                <a href="assets/resume/PRAJJWAL_SUBEDI_Resume.pdf"><button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button></a>
                         </div>
                     </div>
                 </div>

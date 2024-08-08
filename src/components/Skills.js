@@ -7,7 +7,7 @@ function Skillls() {
                     <h6 class="subtitle">Skills</h6>
                     <h6 class="section-title mb-4">Why Choose Me</h6>
                     <p class="mb-5 pb-4">With extensive experience in software testing, I ensure high-quality and reliable
-                        software through meticulous testing and continuous improvement. <br /> Here’s a glimpse of my expertise:
+                        software through meticulous testing and continuous improvement. <br /> Here\'s a glimpse of my expertise:
                     </p>
 
                     <div class="row text-left">
@@ -71,7 +71,7 @@ function Skillls() {
                             <h6 class="mb-3">BDD Frameworks (Cucumber)</h6>
                             <div class="progress">
                                 <div class="progress-bar bg-primary" role="progressbar" style="width: 65%;" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"><span>6%</span></div>
+                                    aria-valuemin="0" aria-valuemax="100"><span>65%</span></div>
                             </div>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ function Blog() {
                 <div class="container text-center">
                     <h6 class="subtitle">My Blogs</h6>
                     <h6 class="section-title mb-4">Latest News</h6>
-                    <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br>
+                    <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br />
                         rerum commodi corrupti, temporibus non quam.</p>
 
                     <div class="row text-left">

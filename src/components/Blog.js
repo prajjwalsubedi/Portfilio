@@ -11,7 +11,7 @@ function Blog() {
                     <div class="row text-left">
                         <div class="col-md-4">
                             <div class="card border mb-4">
-                                <img src="assets/imgs/blog/The_Evolution_of_QA.png" alt="" class="card-img-top w-100"/>
+                                <img src="assets/imgs/Blog/The_Evolution_of_QA.png" alt="" class="card-img-top w-100"/>
                                 <div class="card-body">
                                     <h5 class="card-title">The Evolution of QA: From Manual Testing to Automation</h5>
                                     <div class="post-details">

@@ -1,13 +1,13 @@
-function Skillls() {
+function Skills() {
     return (
-        <div className="Skillls">
+        <div className="Skills">
             {/* <!-- Skills section --> */}
             <section class="section">
                 <div class="container text-center">
                     <h6 class="subtitle">Skills</h6>
                     <h6 class="section-title mb-4">Why Choose Me</h6>
                     <p class="mb-5 pb-4">With extensive experience in software testing, I ensure high-quality and reliable
-                        software through meticulous testing and continuous improvement. <br /> Here\'s a glimpse of my expertise:
+                        software through meticulous testing and continuous improvement. <br /> Here’s a glimpse of my expertise:
                     </p>
 
                     <div class="row text-left">
@@ -61,14 +61,14 @@ function Skillls() {
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <h6 class="mb-3">API Test Tools - Postman</h6>
+                            <h6 class="mb-3">API Test Tools (Postman)</h6>
                             <div class="progress">
                                 <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="25"
                                     aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <h6 class="mb-3">BDD Frameworks - Cucumber</h6>
+                            <h6 class="mb-3">BDD Frameworks (Cucumber)</h6>
                             <div class="progress">
                                 <div class="progress-bar bg-primary" role="progressbar" style="width: 65%;" aria-valuenow="25"
                                     aria-valuemin="0" aria-valuemax="100"><span>65%</span></div>
@@ -83,5 +83,5 @@ function Skillls() {
     );
   }
   
-  export default Skillls;
+  export default Skills;
   

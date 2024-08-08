@@ -51,7 +51,7 @@ function Header() {
                   <p>Software Development Engineer in Test</p>
   
                   <div class="buttons pt-3">
-                        <a href="mailto:prajjwalsubedi95@gmail.com"><button class="btn btn-light rounded">Hire Me!</button></a>
+                        <a href="mailto:prajjwalsubedi95@gmail.com"><button class="btn btn-primary rounded">Hire Me!</button></a>
                         <a href="assets/resume/PRAJJWAL_SUBEDI_Resume.pdf"><button class="btn btn-dark rounded">DOWNLOAD CV</button></a>
                   </div>
   

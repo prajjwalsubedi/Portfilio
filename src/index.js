@@ -7,12 +7,13 @@ import Service from './components/Service';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
+// import Testmonial from './components/Testmonial';
+import Blog from './components/Blog';
 import Experience from './components/Experience';
+
 import reportWebVitals from './reportWebVitals';
 import { sendToVercelAnalytics } from './vitals';
-import Testmonial from './components/Testmonial';
-import Blog from './components/BLOG';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,7 +22,7 @@ ReactDOM.render(
     <Service />
     <Skills />
     <Experience />
-    <Testmonial />
+    {/* <Testmonial /> */}
     <Blogg />
     <Contact />
     <Footer />

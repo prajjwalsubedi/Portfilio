@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 
 import Header from './components/Header';
 import About from './components/About';
-// import Service from './components/Service';
-// import Skills from './components/Skills';
+import Service from './components/Service';
+import Skills from './components/Skills';
 // import Experience from './components/Experience';
 // import Testmonial from './components/Testmonial';
 // import Blog from './components/Blog';
@@ -20,13 +20,13 @@ ReactDOM.render(
   <React.StrictMode>
     <Header />
     <About />
-    {/* <Service />
+    <Service />
     <Skills />
-    <Experience />
-    <Testmonial />
-    <Blog />
-    <Contact />
-    <Footer /> */}
+    {/* <Experience /> */}
+    {/* <Testmonial /> */}
+    {/* <Blog /> */}
+    {/* <Contact /> */}
+    {/* <Footer />  */}
   </React.StrictMode>,
 
   document.getElementById('root')

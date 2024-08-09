@@ -33,6 +33,10 @@ function Contact() {
                             <h6 class="subtitle">Available on Office hours</h6>
                             <h6 class="section-title mb-4">Get In Touch</h6>
                             <form>
+                            <div class="form-group">
+                                    <input type="text" class="form-control" id="exampleInputName"
+                                        placeholder="Name" required/>
+                                </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp" placeholder="Enter email" required/>
@@ -42,10 +46,10 @@ function Contact() {
                                         placeholder="Subject" required/>
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="contact-message" id="" cols="30" rows="5" class="form-control"
+                                    <textarea name="contact-message" id="exampleInputMessage" cols="30" rows="5" class="form-control"
                                         placeholder="Message"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
+                                <button type="submit" class="btn btn-primary btn-block rounded w-lg" onclick="sendMail(); return false">Send Message</button>
                             </form>
                         </div>
                         <div class="contact-infos">
@@ -78,6 +82,18 @@ function Contact() {
                 </div>
             </section>
             {/* <!-- End of Contact Section --> */}
+
+
+            function sendMail() {
+                var link = "mailto:"+ encodeURIComponent(document.getElementById('exampleInputEmail1').value)
+                        + "?cc=prajjwalsubedi95@gmail.com" + 
+                        + "&subject=" + encodeURIComponent(document.getElementById('exampleInputSubject').value)
+                        + "&body=" + encodeURIComponent(document.getElementById('exampleInputMessage').value)
+                ;
+                
+                window.location.href = link;
+            }
+
       </div>
     );
   }

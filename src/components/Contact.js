@@ -6,14 +6,17 @@ function Contact() {
     const form = useRef();
 
     const sendEmail = (e) => {
+        console.log("Service Key:", process.env.Email_JS_Service_Key);
+        console.log("Template ID:", process.env.Email_JS_Template_ID);
+        console.log("Public Key:", process.env.Email_JS_PUBLIC_KEY);
         e.preventDefault();
       
         emailjs
           .sendForm(
-            REACT_APP_Email_JS_Service_Key, 
-            REACT_APP_Email_JS_Template_ID, 
+            process.env.Email_JS_Service_Key, 
+            process.env.Email_JS_Template_ID, 
             form.current, 
-            { publicKey: REACT_APP_Email_JS_PUBLIC_KEY }
+            { publicKey: process.env.Email_JS_PUBLIC_KEY }
           )
           .then((response) => {
             console.log('SUCCESS!', response.status, response.text);

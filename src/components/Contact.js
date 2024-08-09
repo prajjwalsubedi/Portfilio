@@ -7,6 +7,7 @@ function Contact() {
 
     const sendEmail = (e) => {
       e.preventDefault();
+      console.log(process.env.Email_JS_Service_Key);
   
       emailjs
         .sendForm(process.env.Email_JS_Service_Key, process.env.Email_JS_Template_ID, form.current, {

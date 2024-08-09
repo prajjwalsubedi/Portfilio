@@ -72,7 +72,7 @@ function Contact() {
                                     <textarea name="message" id="exampleInputMessage" cols="30" rows="5" 
                                         class="form-control" placeholder="Message" required></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block rounded w-lg" value="Send">Send Message</button>
+                                <input type="submit" value="Send" class="btn btn-primary btn-block rounded w-lg" />
                             </form>
                         </div>
                         <div class="contact-infos">

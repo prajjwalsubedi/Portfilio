@@ -21,6 +21,25 @@ function Contact() {
             </section>
             {/* <!-- End od Hire me section. --> */}
 
+
+            {/* // State variables for form inputs */}
+            const [name, setName] = useState('');
+            const [email, setEmail] = useState('');
+            const [subject, setSubject] = useState('');
+            const [message, setMessage] = useState('');
+
+            {/* // Function to handle sending the email */}
+            const sendMail = (e) => {
+                e.preventDefault(); // Prevent form submission which causes page reload
+                const mailtoLink = `mailto:prajjwalsubedi95@gmail.com`
+                    + `?cc=${encodeURIComponent(email)}`
+                    + `&subject=${encodeURIComponent(subject)}`
+                    + `&body=${encodeURIComponent(message)}`;
+
+                // Redirect to the mailto link to open the email client
+                window.location.href = mailtoLink;
+            };
+
             {/* <!-- Contact Section --> */}
             <section id="contact" class="position-relative section">
                 <div class="container text-center">
@@ -29,29 +48,60 @@ function Contact() {
                 <p class="mb-5 pb-4">I'd love to hear from you! Whether you have a question, need assistance, or want to discuss a project, feel free to reach out. <br />
                     Let's connect and explore how we can work together.</p>
                     <div class="contact text-left">
-                        <div class="form">
-                            <h6 class="subtitle">Available on Office hours</h6>
-                            <h6 class="section-title mb-4">Get In Touch</h6>
-                            <form>
-                            <div class="form-group">
-                                    <input type="text" class="form-control" id="exampleInputName"
-                                        placeholder="Name" required/>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Enter email" required/>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="exampleInputSubject"
-                                        placeholder="Subject" required/>
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="contact-message" id="exampleInputMessage" cols="30" rows="5" class="form-control"
-                                        placeholder="Message"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-block rounded w-lg" onclick="sendMail(); return false">Send Message</button>
-                            </form>
-                        </div>
+                    <div className="form">
+                        <h6 className="subtitle">Available on Office hours</h6>
+                        <h6 className="section-title mb-4">Get In Touch</h6>
+                        <form onSubmit={sendMail}>
+                            <div className="form-group">
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="exampleInputName"
+                                    placeholder="Name"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className="form-group">
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    id="exampleInputEmail1"
+                                    placeholder="Enter email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className="form-group">
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="exampleInputSubject"
+                                    placeholder="Subject"
+                                    value={subject}
+                                    onChange={(e) => setSubject(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className="form-group">
+                                <textarea
+                                    name="contact-message"
+                                    id="exampleInputMessage"
+                                    cols="30"
+                                    rows="5"
+                                    className="form-control"
+                                    placeholder="Message"
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                />
+                            </div>
+                            <button type="submit" className="btn btn-primary btn-block rounded w-lg">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
                         <div class="contact-infos">
                             <div class="item">
                                 <i class="ti-location-pin"></i>
@@ -82,17 +132,6 @@ function Contact() {
                 </div>
             </section>
             {/* <!-- End of Contact Section --> */}
-
-
-            function sendMail() {
-                var link = "mailto:"+ encodeURIComponent(document.getElementById('exampleInputEmail1').value)
-                        + "?cc=prajjwalsubedi95@gmail.com" + 
-                        + "&subject=" + encodeURIComponent(document.getElementById('exampleInputSubject').value)
-                        + "&body=" + encodeURIComponent(document.getElementById('exampleInputMessage').value)
-                ;
-                
-                window.location.href = link;
-            }
 
       </div>
     );

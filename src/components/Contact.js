@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 function Contact() {
 
@@ -7,15 +8,26 @@ function Contact() {
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
 
-    const sendMail = (e) => {
-        e.preventDefault(); // Prevent form submission which causes page reload
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-        const mailtoLink = `mailto:${encodeURIComponent(email)}`
-            + `?cc=prajjwalsubedi95@gmail.com`
-            + `&subject=${encodeURIComponent(subject)}`
-            + `&body=${encodeURIComponent(message)}`;
+        const templateParams = {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message,
+        };
 
-        window.location.href = mailtoLink;
+        emailjs.send(process.env.Email_JS_Service_Key, process.env.Email_JS_Template_ID, form.current, {
+            publicKey: process.env.Email_JS_PUBLIC_KEY,
+          })
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Email sent successfully!');
+            }, (error) => {
+                console.log('FAILED...', error);
+                alert('Failed to send the email, please try again.');
+            });
     };
 
     return (
@@ -43,78 +55,64 @@ function Contact() {
             {/* <!-- Contact Section --> */}
             <section id="contact" class="position-relative section">
                 <div class="container text-center">
-                <h6 className="subtitle">Available on Office hours</h6>
-                <h6 className="section-title mb-4">Get In Touch</h6>
-                <form onSubmit={sendMail}>
-                    <div className="form-group">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            required
-                        />
+                <h6 class="subtitle">Contact</h6>
+                <h6 class="section-title mb-4">Get In Touch</h6>
+                <p class="mb-5 pb-4">I'd love to hear from you! Whether you have a question, need assistance, or want to discuss a project, feel free to reach out. <br />
+                    Let's connect and explore how we can work together.</p>
+                    <div class="contact text-left">
+                        <div class="form">
+                            <h6 class="subtitle">Available on Office hours</h6>
+                            <h6 class="section-title mb-4">Get In Touch</h6>
+                            <form ref={form} onSubmit={sendMail}>
+                            <div class="form-group">
+                                    <input type="text" class="form-control" id="exampleInputName"
+                                        placeholder="Name" value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                        required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Enter email" value={email}
+                                        onChange={(e) => setEmail(e.target.value)} required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="exampleInputSubject"
+                                        placeholder="Subject" value={subject}
+                                        onChange={(e) => setSubject(e.target.value)} required/>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="contact-message" id="exampleInputMessage" cols="30" rows="5" 
+                                        class="form-control" placeholder="Message" value={message}
+                                        onChange={(e) => setMessage(e.target.value)} required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
+                            </form>
+                        </div>
+                        <div class="contact-infos">
+                            <div class="item">
+                                <i class="ti-location-pin"></i>
+                                <div class="">
+                                    <h5>Location</h5>
+                                    <p>Broad Run, Virginia, USA</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <i class="ti-mobile"></i>
+                                <div>
+                                    <h5>Phone Number</h5>
+                                    <p>(571) 538-9808</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <i class="ti-email"></i>
+                                <div class="mb-0">
+                                    <h5>Email Address</h5>
+                                    <p>prajjwalsubedi95@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="form-group">
-                        <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Enter email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Subject"
-                            value={subject}
-                            onChange={(e) => setSubject(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <textarea
-                            className="form-control"
-                            cols="30"
-                            rows="5"
-                            placeholder="Message"
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <button type="submit" className="btn btn-primary btn-block rounded w-lg">
-                        Send Message
-                    </button>
-                </form>
                 </div>
-                    <div class="contact-infos">
-                        <div class="item">
-                            <i class="ti-location-pin"></i>
-                            <div class="">
-                                <h5>Location</h5>
-                                <p>Broad Run, Virginia, USA</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <i class="ti-mobile"></i>
-                            <div>
-                                <h5>Phone Number</h5>
-                                <p>(571) 538-9808</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <i class="ti-email"></i>
-                            <div class="mb-0">
-                                <h5>Email Address</h5>
-                                <p>prajjwalsubedi95@gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
                 <div id="map">
                     <iframe src="https://snazzymaps.com/embed/61257"></iframe>
                 </div>

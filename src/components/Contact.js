@@ -55,7 +55,7 @@ function Contact() {
                             <h6 class="subtitle">Available on Office hours</h6>
                             <h6 class="section-title mb-4">Get In Touch</h6>
                             <form ref={form} onSubmit={sendEmail}>
-                            <div class="form-group">
+                                <div class="form-group">
                                     <input type="text" class="form-control" id="exampleInputName"
                                         placeholder="Name" name="full_name"
                                         required/>

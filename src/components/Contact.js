@@ -6,20 +6,23 @@ function Contact() {
     const form = useRef();
 
     const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs
-        .sendForm(process.env.Email_JS_Service_Key, process.env.Email_JS_Template_ID, form.current, {
-            publicKey: process.env.Email_JS_PUBLIC_KEY,
-          })
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                alert('Email sent successfully!');
-            }, (error) => {
-                console.log('FAILED...', error.text);
-                alert('Failed to send the email, please try again.');
-            });
-    };
+        e.preventDefault();
+      
+        emailjs
+          .sendForm(
+            REACT_APP_Email_JS_Service_Key, 
+            REACT_APP_Email_JS_Template_ID, 
+            form.current, 
+            { publicKey: REACT_APP_Email_JS_PUBLIC_KEY }
+          )
+          .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Email sent successfully!');
+          }, (error) => {
+            console.log('FAILED...', error.text);
+            alert('Failed to send the email, please try again.');
+          });
+      };
 
     return (
       <div className="Contact">
@@ -105,7 +108,6 @@ function Contact() {
                 </div>
             </section>
             {/* <!-- End of Contact Section --> */}
-            console.log(process.env.Email_JS_Service_Key);
       </div>
     );
   }

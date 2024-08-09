@@ -1,31 +1,22 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [subject, setSubject] = useState('');
-    const [message, setMessage] = useState('');
+    const form = useRef();
 
     const sendEmail = (e) => {
-        e.preventDefault();
-
-        const templateParams = {
-            name: name,
-            email: email,
-            subject: subject,
-            message: message,
-        };
-
-        emailjs.send(process.env.Email_JS_Service_Key, process.env.Email_JS_Template_ID, form.current, {
+      e.preventDefault();
+  
+      emailjs
+        .sendForm(process.env.Email_JS_Service_Key, process.env.Email_JS_Template_ID, form.current, {
             publicKey: process.env.Email_JS_PUBLIC_KEY,
           })
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Email sent successfully!');
             }, (error) => {
-                console.log('FAILED...', error);
+                console.log('FAILED...', error.text);
                 alert('Failed to send the email, please try again.');
             });
     };
@@ -63,27 +54,23 @@ function Contact() {
                         <div class="form">
                             <h6 class="subtitle">Available on Office hours</h6>
                             <h6 class="section-title mb-4">Get In Touch</h6>
-                            <form ref={form} onSubmit={sendMail}>
+                            <form ref={form} onSubmit={sendEmail}>
                             <div class="form-group">
                                     <input type="text" class="form-control" id="exampleInputName"
-                                        placeholder="Name" value={name}
-                                        onChange={(e) => setName(e.target.value)}
+                                        placeholder="Name" name="full_name"
                                         required/>
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Enter email" value={email}
-                                        onChange={(e) => setEmail(e.target.value)} required/>
+                                        aria-describedby="emailHelp" placeholder="Enter email" name="email" required/>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="exampleInputSubject"
-                                        placeholder="Subject" value={subject}
-                                        onChange={(e) => setSubject(e.target.value)} required/>
+                                        placeholder="Subject" name="subject" required/>
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="contact-message" id="exampleInputMessage" cols="30" rows="5" 
-                                        class="form-control" placeholder="Message" value={message}
-                                        onChange={(e) => setMessage(e.target.value)} required></textarea>
+                                    <textarea name="message" id="exampleInputMessage" cols="30" rows="5" 
+                                        class="form-control" placeholder="Message" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
                             </form>

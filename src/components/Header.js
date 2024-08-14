@@ -34,7 +34,7 @@ function Header() {
                           <a class="nav-link" href="#contact">Contact</a>
                       </li>
                       <li class="nav-item">
-                          <a class="- btn btn-primary rounded ml-4" href="components.html">Copmonents</a>
+                          <a class="- btn btn-primary rounded ml-4" href="#contact">Hire Me</a>
                       </li>
                   </ul>
               </div>

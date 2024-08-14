@@ -4,7 +4,7 @@ function Header() {
          {/* <!-- Page navigation --> */}
       <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
           <div class="container">
-              <a class="navbar-brand" href="#"><img src="assets/imgs/logo.svg" alt=""/></a>
+            <h1><a class="navbar-brand" href="#"><span class="f_Name">Prajjwal </span><span class="l_Name">Subedi</span></a></h1>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>

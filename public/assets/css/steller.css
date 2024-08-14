@@ -11644,3 +11644,13 @@ pre {
 .section.bg-gray {
   background: white;
 }
+
+.f_Name {
+  color: var(--primary);
+  font-size: 1.5em;
+}
+
+.l_Name{
+  color: var(--secondary);
+  font-size: 1.5em;
+}

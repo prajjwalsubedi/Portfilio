@@ -23,6 +23,22 @@ function Blog() {
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-md-4">
+                            <div class="card border mb-4">
+                                <img src="assets/imgs/Blog/TBest_Practices_for_Writing_Effective_Test_Cases.png" alt="" class="card-img-top w-100"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Best Practices for Writing Effective Test Cases</h5>
+                                    <div class="post-details">
+                                        <a href="https://www.linkedin.com/in/prajjwalsubedi">Posted By: Prajjwal Subedi</a>
+                                    </div>
+                                    <p>
+                                    Effective test cases are clear, concise, and reusable. Prioritize based on risk, cover all scenarios, and include specific preconditions and outcomes. Regularly review and update them for accuracy, and automate where possible to enhance efficiency.
+                                    </p>
+                                    <a href="https://www.linkedin.com/pulse/best-practices-writing-effective-test-cases-prajjwal-subedi-xdgbe">Read More..</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

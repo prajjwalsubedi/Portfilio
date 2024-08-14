@@ -16,7 +16,7 @@ function Contact() {
             process.env.REACT_APP_Email_JS_Service_Key, 
             process.env.REACT_APP_Email_JS_Template_ID, 
             form.current, 
-            { publicKey: emailjs.init(process.env.REACT_APP_Email_JS_PUBLIC_KEY), }
+            process.env.REACT_APP_Email_JS_PUBLIC_KEY,
           )
           .then((response) => {
             console.log('SUCCESS!', response.status, response.text);

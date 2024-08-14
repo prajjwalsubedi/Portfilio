@@ -26,7 +26,7 @@ function Blog() {
 
                         <div class="col-md-4">
                             <div class="card border mb-4">
-                                <img src="assets/imgs/Blog/Best_Practices_for_Writing_Effective_Test_Case.png" alt="" class="card-img-top w-100"/>
+                                <img src="assets/imgs/Blog/Best_Practices_for_Writing_Effective_Test_Cases.png" alt="" class="card-img-top w-100"/>
                                 <div class="card-body">
                                     <h5 class="card-title">Best Practices for Writing Effective Test Cases</h5>
                                     <div class="post-details">

@@ -15,7 +15,7 @@ function Blog() {
                                 <div class="card-body">
                                     <h5 class="card-title">The Evolution of QA: From Manual Testing to Automation</h5>
                                     <div class="post-details">
-                                        <a href="https://www.linkedin.com/in/prajjwalsubedi">Posted By: Prajjwal Subedi</a>
+                                        <a href="https://www.linkedin.com/in/prajjwal-subedi">Posted By: Prajjwal Subedi</a>
                                     </div>
                                     <p>
                                     QA has transformed from manual testing to advanced automation, improving speed, scalability, and accuracy. With AI and continuous integration, QA now plays a crucial role in delivering high-quality software rapidly and efficiently.</p>
@@ -30,7 +30,7 @@ function Blog() {
                                 <div class="card-body">
                                     <h5 class="card-title">Best Practices for Writing Effective Test Cases</h5>
                                     <div class="post-details">
-                                        <a href="https://www.linkedin.com/in/prajjwalsubedi">Posted By: Prajjwal Subedi</a>
+                                        <a href="https://www.linkedin.com/in/prajjwal-subedi">Posted By: Prajjwal Subedi</a>
                                     </div>
                                     <p>
                                     Effective test cases are clear, concise, and reusable. Prioritize based on risk, cover all scenarios, and include specific preconditions and outcomes. Regularly review and update them for accuracy, and automate where possible to enhance efficiency.
